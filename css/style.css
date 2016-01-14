@@ -1,0 +1,450 @@
+body {
+  margin: 0;
+  font-family: 'Arimo', sans-serif;
+}
+
+
+/*Normalize CSS*/
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  transition: 3s;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  display: block;
+  width: 20px;
+  height: 33px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background-image: url(../img/arrow-slider.png);
+  z-index: 5;
+  opacity: 0;
+  transition: 1.4s ease;
+}
+
+.slick-slider:hover .slick-prev,
+.slick-slider:hover .slick-next {
+  opacity: 1;
+}
+
+.slick-next {
+  position: absolute;
+  left: 95%;
+  transform: rotate(180deg);
+}
+
+/*Style*/
+
+.container {
+  width: 660px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.promo {
+  background-image: url(../img/bgr-680.jpg);
+}
+
+.rent .container{
+  background-color: #fff;
+}
+
+.rent-title {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 28px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.tabs {
+  background-color: #fff;
+  width: 60%;
+  float: left;
+  padding-left: 15px;
+}
+
+.tabs-list {
+  padding: 0;
+  list-style: none;
+}
+
+.tabs-link {
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.tabs-link a {
+  display: block;
+  color: grey;
+  text-decoration: none;
+  margin: 10px 10px 10px 5px;
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.tabs-link a:hover, .tabs-link.active a {
+  color: #000;
+}
+
+.tabs-link.active a {
+  border-bottom: 2px solid black;
+}
+
+.tab-item {
+  display: none;
+}
+
+.tab-item p {
+  margin: 8px 6px;
+}
+
+.tab-item.active {
+  display: block;
+}
+
+.tabs-link:after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: grey;
+  border-radius: 25px;
+  left: 97%;
+  top: 38%;
+}
+
+.tabs-link:last-of-type:after {
+  display: none;
+}
+
+.advantages,
+.security,
+.service {
+  width: 100%;
+  float: left;
+}
+
+.advantage-name,
+.security-name,
+.service-name {
+  font-family: "Times New Roman";
+  margin-left: 5px;
+  font-style: italic;
+  color: grey;
+}
+
+.building {
+  color: #edbe7c;
+}
+
+.security-name {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.service-name  {
+  letter-spacing: 0.05em;
+}
+
+.advantage-name:first-of-type,
+.security-name:first-of-type,
+.service-name:first-of-type  {
+  margin-top: 0;
+}
+
+.advantage-discription,
+.security-discription,
+.service-discription {
+  font-style: normal;
+  color: #000;
+  text-decoration: none;
+}
+
+.security-discription {
+  font-style: italic;
+}
+
+.service-discription {
+  text-decoration: underline;
+  text-transform: none;
+}
+
+.advantage-discription-name,
+.advantage-discription-adress{
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.advantage-discription-name:hover,
+.advantage-discription-adress:hover {
+  border-bottom: 1px solid #ff0900;
+}
+
+.advantage-discription-name {
+  text-transform: uppercase;
+}
+
+.promo-name {
+
+  float: right;
+  position: relative;
+}
+
+.promo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.office-name {
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 10px 20px;
+  background-color: #b79364;
+  transition: 2s ease background-color;
+  border-radius: 25px 0% 0% 25px;
+}
+
+.office-name:hover {
+  background-color: #ff0000;
+}
+
+
+@media(min-width: 980px) {
+  .container {
+    width: 960px;
+  }
+
+  .promo {
+    background-image: url(../img/bgr.jpg);
+  }
+
+  .rent-title {
+    font-size: 32px;
+    color: #fff;
+  }
+
+  .slick-slide img {
+    max-height: 460px;
+  }
+
+  .tabs {
+    width: 68%;
+  }
+
+  .tab-item p {
+    margin: 14px 6px;
+  }
+
+  .promo-name {
+    width:30%;
+  }
+
+  .advantages,
+  .security,
+  .service {
+    width: 50%;
+  }
+
+  .office-name {
+    font-size: 14px;
+    padding: 10px 26px;
+  }
+}
+
+
+@media(min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+
+  .rent-title {
+    font-size: 36px;
+  }
+
+  .slick-slide img {
+    max-height: 520;
+  }
+
+  .tabs {
+    width: 73%;
+  }
+
+  .promo-name {
+    width: 25%;
+  }
+
+  .office-name {
+    font-size: 16px;
+    padding: 10px 40px;
+  }
+}
